@@ -6,8 +6,7 @@ import java.util.Scanner;
 
 public class Bank {
 	private Person[] people;
-	private static Random random = new Random();
-	private static ArrayList<Integer> extractedNumbers = new ArrayList<Integer>();
+	private static ArrayList<Integer> extractedNumbers = new ArrayList<>();
 	
 	public Bank(int nPeople) {
 		people = new Person[nPeople];
@@ -46,7 +45,7 @@ public class Bank {
 		boolean ok = false;
 		int extract = 0;
 		while(!ok) {
-			extract = random.nextInt(1,91);
+			extract = new Random().nextInt(1,91);
 			if(!extractedNumbers.contains(extract)) {
 				extractedNumbers.add(extract);
 				ok = !ok;

@@ -6,13 +6,12 @@ import java.util.Random;
 public class Card {
 	private int[][] numbers;
 	private static int cardNumber = 0;
-	private static Random random = new Random();
 
 	public Card(ArrayList<Integer> numeriUtilizzati) {
 		numbers = new int[3][5];
-		ArrayList<Integer> numeriEstratti = new ArrayList<Integer>();
+		ArrayList<Integer> numeriEstratti = new ArrayList<>();
 		while (numeriEstratti.size() != 15) {
-			int numeroSingolo = random.nextInt(1, 91);
+			int numeroSingolo = new Random().nextInt(1, 91);
 			if (!numeriUtilizzati.contains(numeroSingolo)) {
 				numeriEstratti.add(numeroSingolo);
 				numeriUtilizzati.add(numeroSingolo);

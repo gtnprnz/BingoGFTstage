@@ -10,7 +10,7 @@ public class Person {
 	public Person(String name, int nCards) {
 		this.name = name;
 		this.cards = new Card[nCards];
-		ArrayList<Integer> numeriUtilizzati = new ArrayList<Integer>();
+		ArrayList<Integer> numeriUtilizzati = new ArrayList<>();
 		for (int i = 0; i < nCards; i++) {
 			cards[i] = new Card(numeriUtilizzati);
 		}
