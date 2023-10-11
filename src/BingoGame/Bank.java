@@ -8,11 +8,11 @@ public class Bank {
 	private Person[] people;
 	private static Random random = new Random();
 	private static ArrayList<Integer> extractedNumbers = new ArrayList<Integer>();
-	private static Scanner sc = new Scanner(System.in);
 	
 	public Bank(int nPeople) {
 		people = new Person[nPeople];
 		for(int i = 0; i < nPeople; i++) {
+			Scanner sc = new Scanner(System.in);
 			System.out.print("Inserisci nome giocatore: ");
 			String name = sc.nextLine();
 			boolean check = false;
